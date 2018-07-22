@@ -1,4 +1,4 @@
-package com.example.quartz.trigger;
+package com.example.quartz.configuration;
 
 import com.example.quartz.job.sample.SampleJobDetail;
 import org.quartz.JobDetail;
@@ -6,12 +6,12 @@ import org.quartz.SimpleScheduleBuilder;
 import org.quartz.Trigger;
 import org.quartz.TriggerBuilder;
 import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Service;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * Created by mtumilowicz on 2018-07-22.
  */
-@Service
+@Configuration
 public class TriggerProducer {
     @Bean
     public Trigger sampleJobTrigger(@SampleJobDetail JobDetail jobDetail) {
