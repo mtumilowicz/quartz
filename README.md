@@ -24,16 +24,16 @@ Quartz is very light-weight, and requires very little setup/configuration.
 
 * quartz job (`SampleJob.java`)
     1. Inherit `QuartzJobBean`
-    ```
-    SampleJob extends QuartzJobBean
-    ```
+        ```
+        SampleJob extends QuartzJobBean
+        ```
     2. Implement `executeInternal(JobExecutionContext context)`
-    ```
-    @Override
-    protected void executeInternal(JobExecutionContext context) {
-        System.out.println("SampleJob invoked!");
-    }
-    ```
+        ```
+        @Override
+        protected void executeInternal(JobExecutionContext context) {
+            System.out.println("SampleJob invoked!");
+        }
+        ```
 * produce job as a `JobDetail` (`JobProducer.java`)
     ```
     @Bean
