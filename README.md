@@ -13,6 +13,18 @@ along side virtually any other software system.
 
 Quartz is very light-weight, and requires very little setup/configuration.
 
+# pros
+* open source,
+* support for JTA: Quartz can manage JTA transactions (begin and commit 
+them) around the execution of a Job, so that the work performed by the 
+Job automatically happens within a JTA transaction,
+* support for clustering (useful for load balancing),
+* `JDBCJobStore` - all Jobs and Triggers configured as “non-volatile” are 
+stored in a relational database via JDBC,
+* `RAMJobStore` - ll Jobs and Triggers are stored in RAM and therefore 
+do not persist between program executions - but this has the advantage 
+of not requiring an external database.
+
 # manual
 * `pom.xml`
     ```
